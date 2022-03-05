@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
+    <title>Document</title>
 
-    <link href="style/common.css" rel="stylesheet" type="text/css" />
-    <link href="style/login.css" rel="stylesheet" type="text/css" />
-    <!-- favicon -->
-    <link rel="icon" href="img/favicon.png">
-    <link rel="instagram-icon" href="img/favicon.png">
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <div class="container">
-        <img class="logo_instagram" src="img/logo_text.png" alt="instagram_logo">
-        <input type="text" class="input_login" name="userID" id="userID" placeholder="전화번호, 사용자 이름 또는 이메일">
-        <input type="password" class="input_login" name="userPW" id="userPW" placeholder="비밀번호">
-        <a href="#none"><button id="btn_login" disabled>로그인</button></a>
-        <span class="button_forgot">비밀번호를 잊으셨나요?</span>
+    <div class="wrap">
+        <div class="login">
+            <h2>Log-in</h2>
+           
+            <div class="login_id">
+                <h4>E-mail</h4>
+                <input type="email" name="" id="" placeholder="이메일을 입력해주세요">
+            </div>
+            <div class="login_pw">
+                <h4>Password</h4>
+                <input type="password" name="" id="" placeholder="비밀번호를 입력해주세요">
+            </div>
+            <div class="login_etc">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id=""> 로그인 상태유지
+                </div>
+    
+            </div>
+            <div class="submit">
+                <input type="submit" value="로그인">
+            </div>
+            <div class="login_etc">
+                <div class="forgot_pw">
+                    <a href="">아이디 찾기</a>
+                    <a href="">비밀번호 찾기</a>
+                </div>
+            </div>
+            <div class="login_sns">
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </div>
+        </div>
     </div>
-
-
-    <h1>여기서 게시판으로 들어갈건지 출석체크만할건지 클릭</h1>
-
-    <script src="js/login.js"></script>
+    
 </body>
 </html>
