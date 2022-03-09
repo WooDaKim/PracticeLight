@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Optional;
+
 @RequiredArgsConstructor
 @Service
 public class UserService {
@@ -34,14 +36,17 @@ public class UserService {
     //User 수정
     @Transactional
     public void update(UserUpdateDto userUpdateDto, MultipartFile multipartFile)  {
-        User user = userRepository.findById(User.builder().build().getId());
-
+        Optional<User> user = userRepository.findById(User.builder().build().getId());
         // 프로필업로드 되었는지 확인
+        if(!multipartFile.isEmpty()) {
+
+        }
 
     }
 
     @Transactional
-    public UserProfileDto userProfileDto() {
+    public UserProfileDto userProfileDto(long profileId, long sessionId) {
+
 
         return null;
     }
