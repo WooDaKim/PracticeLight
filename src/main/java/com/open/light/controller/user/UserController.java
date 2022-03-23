@@ -17,6 +17,15 @@ import java.security.Principal;
 public class UserController {
     private final UserService userService;
 
+
+    //카카오 로그인
+    @GetMapping("/user/kakao/callback") public String kakaoLogin(String code) {
+        // code는 카카오 서버로부터 받은 인가 코드
+        log.info("kakaoLogin");
+        memberService.kakaoLogin(code); return "redirect:/"; }
+
+
+
     //사용자 프로필 화면 이동
     @GetMapping("/user/profile")
     public String profile(Model model, long id, User user){
@@ -39,16 +48,5 @@ public class UserController {
         return "redirect:/user/profile";
     }
 
-    //아이디 찾기
-    @GetMapping
-    public String lookingforID() {
-        return "user/ID/findID";
-    }
-
-    //비밀번호 찾기
-    @GetMapping
-    public String lookingforPW() {
-        return "user/Password/findPassword";
-    }
 
 }
